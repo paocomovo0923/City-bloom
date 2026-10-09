@@ -1,0 +1,47 @@
+export interface FurnitureFootprint { width: number; depth: number; height: number }
+
+const FOOTPRINTS: Record<string, FurnitureFootprint> = {
+  sofa: { width: 2.1, depth: 0.9, height: 0.85 },
+  sofa_corner: { width: 2.4, depth: 1.8, height: 0.85 },
+  armchair: { width: 0.95, depth: 0.9, height: 0.85 },
+  bed: { width: 2, depth: 2.2, height: 1.1 },
+  bed_single: { width: 1.2, depth: 2.1, height: 0.95 },
+  bunk_bed: { width: 1.2, depth: 2.1, height: 1.9 },
+  nightstand: { width: 0.55, depth: 0.45, height: 0.55 },
+  table: { width: 1.8, depth: 0.95, height: 0.78 },
+  coffee_table: { width: 1.2, depth: 0.65, height: 0.42 },
+  desk: { width: 1.4, depth: 0.7, height: 0.76 },
+  chair: { width: 0.55, depth: 0.55, height: 0.85 },
+  barstool: { width: 0.45, depth: 0.45, height: 0.95 },
+  office_chair: { width: 0.65, depth: 0.65, height: 1.1 },
+  cabinet: { width: 1.4, depth: 0.6, height: 2 },
+  bookshelf: { width: 1.1, depth: 0.4, height: 1.9 },
+  tv: { width: 1.8, depth: 0.45, height: 1.3 },
+  tv_wall: { width: 1.5, depth: 0.15, height: 0.9 },
+  computer: { width: 1.3, depth: 0.65, height: 0.75 },
+  speaker: { width: 0.35, depth: 0.35, height: 1.05 },
+  fridge: { width: 0.9, depth: 0.8, height: 1.9 },
+  counter: { width: 1, depth: 0.65, height: 0.9 },
+  kitchen_island: { width: 1.6, depth: 0.9, height: 0.92 },
+  stove: { width: 0.9, depth: 0.65, height: 1.8 },
+  toilet: { width: 0.55, depth: 0.7, height: 0.8 },
+  bath: { width: 1.7, depth: 0.9, height: 0.6 },
+  shower: { width: 1, depth: 1, height: 2.1 },
+  sink_vanity: { width: 0.95, depth: 0.55, height: 1.8 },
+  lamp: { width: 0.45, depth: 0.45, height: 0.7 },
+  floor_lamp: { width: 0.55, depth: 0.55, height: 1.6 },
+  ceiling_lamp: { width: 0.6, depth: 0.6, height: 1.2 },
+  plant: { width: 0.6, depth: 0.6, height: 0.9 },
+  plant_tree: { width: 0.8, depth: 0.8, height: 1.8 },
+  fireplace: { width: 1.5, depth: 0.45, height: 1.2 },
+  rug: { width: 2.4, depth: 1.6, height: 0.04 },
+  wall_art: { width: 1.2, depth: 0.08, height: 0.8 },
+  guitar: { width: 0.45, depth: 0.45, height: 1.05 },
+  cash_register: { width: 0.72, depth: 0.6, height: 0.78 },
+  display_case: { width: 1.5, depth: 0.72, height: 1.25 },
+  menu_board: { width: 1.35, depth: 0.16, height: 1.25 },
+};
+
+export function getFurnitureFootprint(type: string): FurnitureFootprint {
+  return FOOTPRINTS[type] || { width: 1, depth: 1, height: 0.8 };
+}

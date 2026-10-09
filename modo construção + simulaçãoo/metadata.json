@@ -1,0 +1,6 @@
+{
+  "name": "The Sims Mobile 3D House Builder",
+  "description": "Editor de casas 3D interativo inspirado no The Sims Mobile com construção de paredes, cômodos, portas, janelas, móveis e pisos em tempo real.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
